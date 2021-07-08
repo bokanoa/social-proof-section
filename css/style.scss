@@ -15,7 +15,24 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-image: url('../images/bg-pattern-top-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: -10% -10%;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
 }
+
+
+
+.bottom-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(10%, 10%);
+}
+
 .wrap {
     height: 100vh;
     display: flex;
@@ -207,6 +224,14 @@ $platforms : (
 }
 
 @include query(mobile){
+    body{
+        background-position: -20% -20%;
+        overflow: hidden;
+    }
+    .bottom-img {
+        transform: translate(50%, 50%);
+        overflow: hidden;
+    }
     .wrap {
         height: 100vh;
         display: grid;
